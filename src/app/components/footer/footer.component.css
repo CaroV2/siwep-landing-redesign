@@ -3,8 +3,10 @@
   justify-content: space-around;
   background: rgba(1, 17, 38, 0.75);
   color: white;
-  padding: 2rem;
-  font-size: 1rem;
+  font-size: 12px;
+  width: 100%;
+  padding: 1.2rem;
+  box-sizing: border-box;
 
   li {
     list-style: none;
