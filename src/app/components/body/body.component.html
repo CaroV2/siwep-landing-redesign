@@ -1,0 +1,60 @@
+<main class="body">
+  <!-- logos list; cuando hay un logo seleccionado se aplica la clase 'shift' -->
+
+  <div class="logos" [class.shift]="selectedLogo">
+    <ng-container *ngFor="let logo of logos">
+      <!-- ocultar el botón que fue clicado -->
+      <button
+        class="logo"
+        *ngIf="!selectedLogo || selectedLogo.id !== logo.id"
+        (click)="selectLogo(logo)"
+      >
+        <img [src]="logo.src" [alt]="logo.name" />
+      </button>
+    </ng-container>
+  </div>
+
+  <!-- panel lateral izquierdo: formulario sign-in -->
+  <aside class="side-panel" *ngIf="selectedLogo">
+    <button class="close" (click)="closePanel()" aria-label="Cerrar panel">
+      ×
+    </button>
+
+    <div class="panel-content">
+      <img
+        class="panel-logo"
+        [src]="selectedLogo?.src"
+        [alt]="selectedLogo?.name"
+      />
+      <h2 class="info-panel">Bienvenidos</h2>
+      <p class="info-panel">
+        Seleccione su categoría para ingresar a la plataforma
+      </p>
+
+      <form class="signin-form" (submit)="$event.preventDefault()">
+        <!-- ejemplo de campos (opcionales) -->
+        <div class="actions">
+          <a
+            class="btn primary"
+            href="https://www.google.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Oficial<br>
+            Suboficial<br> 
+            Civil
+          </a>
+
+          <a
+            class="btn secondary"
+            href="https://www.google.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Soldados profesionales
+          </a>
+        </div>
+      </form>
+    </div>
+  </aside>
+</main>

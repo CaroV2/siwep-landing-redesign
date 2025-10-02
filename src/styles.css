@@ -1,1 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: 'Vazirmatn';
+    src: url('./assets/fonts/Vazirmatn-VariableFont_wght.ttf');
+  }
+
+  body {
+    margin: 0px;
+    font-family: 'Vazirmatn';
+    background: url('./assets/images/bogota-map.png') #d3d3d3 no-repeat center center;
+    background-size: cover; 
+    background-position: center 100%;
+    background-attachment: fixed;
+    }

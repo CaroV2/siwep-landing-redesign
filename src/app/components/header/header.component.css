@@ -1,0 +1,28 @@
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  background: rgba(1, 17, 38, 0.75);
+  background-size: cover;
+  height: 120px;
+
+  .rectangulo {
+    margin-left: 3rem;
+    width: 250px;
+    height: 60px;
+    background: lightgray;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    height: 150px;
+    justify-content: center;
+
+    .rectangulo {
+      width: 200px;
+      height: 50px;
+    }
+  }
+}

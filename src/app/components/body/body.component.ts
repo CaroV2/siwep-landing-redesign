@@ -1,0 +1,29 @@
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+
+@Component({
+  selector: 'app-body',
+  standalone: true,
+  imports: [CommonModule],
+  templateUrl: './body.component.html',
+  styleUrl: './body.component.css'
+})
+export class BodyComponent {
+  selectedLogo: { id: number; name: string; src: string } | null = null;
+
+  logos = [
+    { id: 1, name: 'Sicope', src: '../../../assets/logos/sicope.png' },
+    { id: 2, name: 'Sinope', src: '../../../assets/logos/sinope.png' },
+    { id: 3, name: 'Coper', src: '../../../assets/logos/coper.png' },
+    { id: 4, name: 'Fovid', src: '../../../assets/logos/fovid.png' },
+    { id: 5, name: 'Astra', src: '../../../assets/logos/astra.png' }
+  ];
+
+  selectLogo(logo: { id: number; name: string; src: string }) {
+    this.selectedLogo = logo;
+  }
+
+  closePanel() {
+    this.selectedLogo = null;
+  }
+}
