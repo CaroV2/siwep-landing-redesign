@@ -42,75 +42,6 @@
     box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.25) inset;
     border: 2px solid #f7f7f7;
   }
-
-  /* panel lateral izquierdo */
-  .side-panel {
-    position: relative;
-    width: 420px;
-    border-radius: 20px;
-    background: rgba(255, 255, 255, 0.7);
-    box-shadow: 0 14px 5.8px 9px rgba(0, 0, 0, 0.25);
-    backdrop-filter: blur(10px);
-    padding: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    animation: slideIn 320ms ease;
-
-    /* contenido del panel */
-    .panel-content {
-      display: flex;
-      gap: 5px;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-
-      .info-panel {
-        margin: 0 !important;
-      }
-
-      .panel-logo {
-        width: 140px;
-        height: auto;
-        margin-bottom: 0.5rem;
-        object-fit: contain;
-      }
-    }
-
-    /* botones del panel */
-    .actions {
-      display: flex;
-      align-items: stretch;
-      gap: 0.5rem;
-      margin-top: 1rem;
-
-      .btn {
-        width: 100%;
-        height: auto;
-        align-self: stretch;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 0.6rem 1rem;
-        border-radius: 20px;
-        border: none;
-        cursor: pointer;
-        min-height: 96px;
-        text-align: center;
-        white-space: normal;
-        word-wrap: break-word;
-        line-height: 110%;
-
-        &.primary {
-          background: #011C40;
-          color: white;
-        }
-
-        &.secondary {
-          background: #074973;
-          color: white;
-        }
-      }
-
       .btn:hover {
         background: #08678C;
         box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.25) inset;      }
@@ -130,7 +61,6 @@
       font-size: 1.5rem;
       cursor: pointer;
     }
-  }
 
   .logos.shift {
     grid-template-columns: repeat(2, 1fr);
@@ -142,7 +72,6 @@
     transform: scale(0.95);
     opacity: 0.95;
   }
-}
 
 
 @media (max-width: 768px) {
@@ -157,13 +86,6 @@
 
     .logos.shift .logo {
       transform: scale(0.85);
-    }
-
-    .side-panel {
-      width: 100%;
-      height: 40%;
-      border-radius: 10px 10px 0 0;
-      animation: slideUp 300ms ease;
     }
   }
 }

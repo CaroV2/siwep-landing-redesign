@@ -1,15 +1,12 @@
-/* altura fija usada para evitar huecos y para dar padding-bottom al body */
 :host {
-  --footer-height: 64px; /* ajusta si necesitas otra altura */
+  --footer-height: 50px;
 }
 
-/* evitar margen por defecto y reservar espacio para el footer en escritorio */
 :host ::ng-deep body {
   margin: 0;
   padding-bottom: var(--footer-height);
 }
 
-/* Desktop: pegado al borde inferior, sin alterar el layout interno */
 .footer {
   display: flex;
   justify-content: space-around;
@@ -24,7 +21,7 @@
   right: 0;
   bottom: 0;
   min-height: var(--footer-height);
-  z-index: 1000; /* asegurar encima de elementos si fuese necesario */
+  z-index: 1000;
 
   li {
     list-style: none;
@@ -109,7 +106,6 @@
   .footer {
     position: static;
     width: 100%;
-    /* mantener diseño responsive: apilar y centrar */
     flex-direction: column;
     align-items: center;
     text-align: center;
